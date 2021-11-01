@@ -171,7 +171,7 @@ class ChatPage extends StatelessWidget {
         ],
       ),
       body: Column(
-        children: [
+        children: <Widget>[
           Container(
             padding: EdgeInsets.all(8),
             child: Text('ログイン情報：${user.email}'),
@@ -179,13 +179,13 @@ class ChatPage extends StatelessWidget {
           Expanded(
             // FutureBuilder
             // 非同期処理の結果を元にWidgetを作れる
-            child: FutureBuilder<QuerySnapshot>(
+            child: StreamBuilder<QuerySnapshot>(
               // 投稿メッセージ一覧を取得（非同期処理）
               // 投稿日時でソート
-              future: FirebaseFirestore.instance
+              stream: FirebaseFirestore.instance
                   .collection('posts')
                   .orderBy('date')
-                  .get(),
+                  .snapshots(),
               builder: (context, snapshot) {
                 // データが取得できた場合
                 if (snapshot.hasData) {
