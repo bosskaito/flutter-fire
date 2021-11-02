@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todo_app/main.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:todo_app/ui/login/user_login.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class ChatApp extends StatelessWidget {
   @override
@@ -36,9 +37,10 @@ class TopPage extends ConsumerWidget {
             Container(
               alignment: Alignment.center,
               height: 200,
-              child: const Text(
-                '真夜中の斎藤さん',
-                style: TextStyle(
+              child: Text(
+                //envの呼び出し
+                dotenv.env['VAR_TITLE'].toString(),
+                style: const TextStyle(
                   color: Colors.white,
                   fontSize: 40,
                   fontFamily: "NewTegomin",

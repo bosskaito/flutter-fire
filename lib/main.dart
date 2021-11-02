@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:todo_app/ui/top/top_page.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 // ユーザー情報の受け渡しを行うためのProvider
 final userProvider = StateProvider((ref) {
@@ -47,7 +48,7 @@ void main() async {
   // 初期化処理を追加
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-
+  await dotenv.load(fileName: ".env");
   runApp(
     // Riverpodでデータを受け渡しできる状態にする
     ProviderScope(
