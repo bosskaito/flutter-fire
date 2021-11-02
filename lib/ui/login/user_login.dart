@@ -4,19 +4,6 @@ import 'package:todo_app/ui/chat/chat_page.dart';
 import 'package:todo_app/main.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class ChatApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'ChatApp',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: LoginPage(),
-    );
-  }
-}
-
 // ConsumerWidgetでProviderから値を受け渡す
 // ログイン画面用Widget
 class LoginPage extends ConsumerWidget {
@@ -30,19 +17,19 @@ class LoginPage extends ConsumerWidget {
     return Scaffold(
       body: Center(
         child: Container(
-          padding: EdgeInsets.all(24),
+          padding: const EdgeInsets.all(24),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextFormField(
-                decoration: InputDecoration(labelText: 'メールアドレス'),
+                decoration: const InputDecoration(labelText: 'メールアドレス'),
                 onChanged: (String value) {
                   // Providerから値を更新
                   context.read(emailProvider).state = value;
                 },
               ),
               TextFormField(
-                decoration: InputDecoration(labelText: 'パスワード'),
+                decoration: const InputDecoration(labelText: 'パスワード'),
                 obscureText: true,
                 onChanged: (String value) {
                   // Providerから値を更新
@@ -50,13 +37,13 @@ class LoginPage extends ConsumerWidget {
                 },
               ),
               Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 child: Text(infoText),
               ),
               Container(
                 width: double.infinity,
                 child: ElevatedButton(
-                  child: Text('ユーザー登録'),
+                  child: const Text('ユーザー登録'),
                   onPressed: () async {
                     try {
                       final FirebaseAuth auth = FirebaseAuth.instance;
@@ -84,7 +71,7 @@ class LoginPage extends ConsumerWidget {
               Container(
                 width: double.infinity,
                 child: OutlinedButton(
-                  child: Text('ログイン'),
+                  child: const Text('ログイン'),
                   onPressed: () async {
                     try {
                       final FirebaseAuth auth = FirebaseAuth.instance;

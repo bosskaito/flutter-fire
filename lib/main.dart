@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:todo_app/ui/login/user_login.dart';
+import 'package:todo_app/ui/top/top_page.dart';
 
 // ユーザー情報の受け渡しを行うためのProvider
 final userProvider = StateProvider((ref) {

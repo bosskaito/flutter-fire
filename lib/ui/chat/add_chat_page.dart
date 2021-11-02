@@ -13,16 +13,16 @@ class AddPostPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('チャット投稿'),
+        title: const Text('チャット投稿'),
       ),
       body: Center(
         child: Container(
-          padding: EdgeInsets.all(32),
+          padding: const EdgeInsets.all(32),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextFormField(
-                decoration: InputDecoration(labelText: '投稿メッセージ'),
+                decoration: const InputDecoration(labelText: '投稿メッセージ'),
                 keyboardType: TextInputType.multiline,
                 maxLines: 3,
                 onChanged: (String value) {
@@ -34,7 +34,7 @@ class AddPostPage extends ConsumerWidget {
               Container(
                 width: double.infinity,
                 child: ElevatedButton(
-                  child: Text('投稿'),
+                  child: const Text('投稿'),
                   onPressed: () async {
                     final date = DateTime.now().toLocal().toIso8601String();
                     final email = user.email;

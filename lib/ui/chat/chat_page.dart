@@ -17,10 +17,10 @@ class ChatPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('チャット'),
+        title: const Text('チャット'),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.close),
+            icon: const Icon(Icons.close),
             onPressed: () async {
               await FirebaseAuth.instance.signOut();
               await Navigator.of(context).pushReplacement(
@@ -35,7 +35,7 @@ class ChatPage extends ConsumerWidget {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8),
             child: Text('ログイン情報：${user.email}'),
           ),
           Expanded(
@@ -51,7 +51,7 @@ class ChatPage extends ConsumerWidget {
                         subtitle: Text(document['email']),
                         trailing: document['email'] == user.email
                             ? IconButton(
-                                icon: Icon(Icons.delete),
+                                icon: const Icon(Icons.delete),
                                 onPressed: () async {
                                   // 投稿メッセージのドキュメントを削除
                                   await FirebaseFirestore.instance
@@ -83,7 +83,7 @@ class ChatPage extends ConsumerWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: () async {
           await Navigator.of(context).push(
             MaterialPageRoute(builder: (context) {
