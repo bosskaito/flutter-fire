@@ -1,0 +1,36 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "todo_app_dev",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_dev.dart",
+                        "args": [
+                            "--debug",
+                            "--flavor",
+                            "dev",
+                        ]
+        },
+        {
+            "name": "todo_app_prod",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_prod.dart",
+            "args": [
+                "--debug",
+                "--flavor",
+                "prod",
+            ]
+        },        
+        {
+            "name": "todo_app (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        }
+    ]
+}

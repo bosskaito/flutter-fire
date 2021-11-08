@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:todo_app/ui/chat/add_chat_page.dart';
 import 'package:todo_app/ui/login/user_login.dart';
-import 'package:todo_app/main.dart';
+import 'package:todo_app/ui/top/top_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 // チャット画面用Widget

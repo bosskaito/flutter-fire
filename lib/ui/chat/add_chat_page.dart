@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:todo_app/main.dart';
+import 'package:todo_app/ui/top/top_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 // 投稿画面用Widget

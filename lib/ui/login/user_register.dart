@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:todo_app/ui/chat/chat_page.dart';
-import 'package:todo_app/main.dart';
+import 'package:todo_app/ui/top/top_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 // ConsumerWidgetでProviderから値を受け渡す
