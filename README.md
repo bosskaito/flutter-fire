@@ -1,6 +1,6 @@
 # todo_app
 
-A new Flutter project.
+フラッター環境構築
 
 ## Getting Started
 
